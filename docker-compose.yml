@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  tomcat:
+    image: docker.io/tomcat
+    ports:
+      - "8081:8080"
+    volumes:
+    - /home/adirz/Desktop/project/adirZDev:/usr/local/tomcat/webapps/status
+
+  jenkins:
+    image: jenkins/jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+    - /home/adirz/Desktop/project/adirZDev:/var/lib/docker/shared/jenkins/webapp
